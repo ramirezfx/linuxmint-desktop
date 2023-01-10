@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mate-desktop:
+    security_opt:
+    - seccomp:unconfined
+    shm_size: "2gb"
+    environment:
+    - USER=lorenzomueller
+    - PASSWORD=CommanDeR
+    - KBD_LANG=de
+    - LANG=de_AT.UTF-8
+    - TZ=Europe/Vienna
+    cap_add:
+    - SYS_PTRACE
+    image: ramirezfx/linuxmin-desktop:cinnamon-latest
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+    - 4005:4000/tcp
+    - 2222:22/tcp
