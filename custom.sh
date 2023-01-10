@@ -25,6 +25,11 @@ wget -O /tmp/mobirise-latest.deb $DLLINK
 apt-get install -y /tmp/mobirise-latest.deb
 rm /tmp/mobirise-latest.deb
 
+# Install Jekyll
+# --------------
+
+apt-get install -y ruby-full build-essential zlib1g-dev
+
 
 # Cleanup
 # -------
