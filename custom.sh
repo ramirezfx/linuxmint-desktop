@@ -17,6 +17,15 @@ fi
 apt update
 apt install -y seafile-gui
 
+# Install Mobirise Website-Builder
+# --------------------------------
+
+DLLINK=$(wget --save-headers --output-document - https://mobirise.com/history.html | grep .deb | grep -Eo 'https://[^ >]+'|head -1 | cut -d'"' -f 1)
+wget -O /tmp/mobirise-latest.deb $DLLINK
+apt-get install -y /tmp/mobirise-latest.deb
+rm /tmp/mobirise-latest.deb
+
+
 # Cleanup
 # -------
 
