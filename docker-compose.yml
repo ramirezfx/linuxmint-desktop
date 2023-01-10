@@ -14,5 +14,4 @@ services:
     stdin_open: true
     tty: true
     ports:
-    - 4005:4000/tcp
-    - 2222:22/tcp
+    - {{ NOMACHINE_PORT }}:4000/tcp
