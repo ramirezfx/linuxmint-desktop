@@ -9,7 +9,7 @@ services:
     - PASSWORD={{ PASSWORD }}
     cap_add:
     - SYS_PTRACE
-    image: ramirezfx/linuxmint-desktop:cinnamon-latest
+    image: ramirezfx/linuxmint-desktop:{{ TAG }}
     restart: always
     stdin_open: true
     tty: true
