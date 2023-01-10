@@ -5,11 +5,8 @@ services:
     - seccomp:unconfined
     shm_size: "2gb"
     environment:
-    - USER=lorenzomueller
-    - PASSWORD=CommanDeR
-    - KBD_LANG=de
-    - LANG=de_AT.UTF-8
-    - TZ=Europe/Vienna
+    - USER={{ USERNAME }}
+    - PASSWORD={{ PASSWORD }}
     cap_add:
     - SYS_PTRACE
     image: ramirezfx/linuxmint-desktop:cinnamon-latest
