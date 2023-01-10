@@ -12,7 +12,7 @@ services:
     - TZ=Europe/Vienna
     cap_add:
     - SYS_PTRACE
-    image: ramirezfx/linuxmin-desktop:cinnamon-latest
+    image: ramirezfx/linuxmint-desktop:cinnamon-latest
     restart: always
     stdin_open: true
     tty: true
