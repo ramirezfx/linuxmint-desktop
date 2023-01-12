@@ -4,12 +4,6 @@ ENV SHELL=/bin/bash
 
 RUN apt-get install -y git cups wget
 
-# Set Timezone
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-# Set System-Language:
-RUN echo $LANG UTF8 > /etc/locale.gen && update-locale LANG=$LANG LANGUAGE
-
 # Download latest nomachine-server
 RUN DLLINK=$(wget --save-headers --output-document - https://downloads.nomachine.com/de/download/?id=5 | grep download.nomachine.com | cut -d '"' -f6 | head -1) && wget -O nomachine.deb $DLLINK && dpkg -i nomachine.deb
 
