@@ -6,7 +6,5 @@ groupadd -r $USER -g 433 \
 && chown -R $USER:$USER /home/$USER \
 && echo $USER':'$PASSWORD | chpasswd
 userdel -r mint
-ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-echo $LANG UTF8 > /etc/locale.gen && update-locale LANG=$LANG LANGUAGE
 /etc/NX/nxserver --startup
 tail -f /usr/NX/var/log/nxserver.log
