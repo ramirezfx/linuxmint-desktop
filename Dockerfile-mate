@@ -3,7 +3,7 @@ FROM ramirezfx/linuxmint-baseimage:$VER
 ENV SHELL=/bin/bash
 
 RUN apt-get update -y
-RUN apt-get install -y git cups wget
+RUN apt-get install -y git cups wget mint-meta-codecs
 
 # Download latest nomachine-server
 RUN wget -O /tmp/nomachine.deb "https://www.nomachine.com/free/linux/64/deb" && apt-get install -y /tmp/nomachine.deb
