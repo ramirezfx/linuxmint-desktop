@@ -2,6 +2,7 @@ ARG VER=cinnamon-latest
 FROM ramirezfx/linuxmint-baseimage:$VER
 ENV SHELL=/bin/bash
 
+RUN apt-get update -y
 RUN apt-get install -y git cups wget
 
 # Download latest nomachine-server
