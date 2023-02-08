@@ -25,6 +25,14 @@ wget -O /tmp/mobirise-latest.deb $DLLINK
 apt-get install -y /tmp/mobirise-latest.deb
 rm /tmp/mobirise-latest.deb
 
+# Install Visual Studio
+# -----------------------
+# To Get the download-link, install the Video-Download-Helper-Plugin for your browser. Navigate to https://code.visualstudio.com.
+# Navigate to the bottom and dowload the arm-64 Version manually. Then use the Video-Download-Helper to get the link and paste it below:
+
+wget -O /tmp/vstudio.deb "https://az764295.vo.msecnd.net/stable/e2816fe719a4026ffa1ee0189dc89bdfdbafb164/code_1.75.0-1675266613_amd64.deb" && apt-get install /tmp/vstudio.deb
+
+
 # Cleanup
 # -------
 
