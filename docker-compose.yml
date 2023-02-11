@@ -17,3 +17,4 @@ services:
     tty: true
     ports:
     - {{ NOMACHINE_PORT }}:4000/tcp
+    - {{ NOMACHINE_UDP_PORT }}:4000/udp
