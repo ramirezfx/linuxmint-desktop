@@ -3,6 +3,7 @@
 # Create User and Group:
 apt-get install -y language-pack-$LANGSHORTNAME
 apt-get install -y language-pack-gnome-$LANGSHORTNAME
+rm -Rf /etc/localtime
 groupadd -r $USER -g 433 \
 && useradd -u 431 -r -g $USER -d /home/$USER -s /bin/bash -c "$USER" $USER \
 && adduser $USER sudo \
