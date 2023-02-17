@@ -32,6 +32,9 @@ rm /tmp/mobirise-latest.deb
 
 wget -O /tmp/vstudio.deb "https://az764295.vo.msecnd.net/stable/e2816fe719a4026ffa1ee0189dc89bdfdbafb164/code_1.75.0-1675266613_amd64.deb" && apt-get install /tmp/vstudio.deb
 
+# Install Tailscale VPN
+curl -fsSL https://tailscale.com/install.sh | sh
+
 
 # Cleanup
 # -------
