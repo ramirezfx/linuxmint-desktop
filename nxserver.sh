@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Install Language-Packs
+LANGSHORTNAME=$(echo $LANG | cut -d _ -f1)
 apt-get install -y language-pack-$LANGSHORTNAME
 apt-get install -y language-pack-gnome-$LANGSHORTNAME
 
