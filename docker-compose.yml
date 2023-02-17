@@ -9,8 +9,10 @@ services:
     - PASSWORD={{ PASSWORD }}
     - LANG={{ LOCALE }}
     - TZ={{ TIMEZONE }}
+    - LANGSHORTNAME={{ LANGSHORTNAME }}
     cap_add:
     - SYS_PTRACE
+    - net_admin
     image: ramirezfx/linuxmint-desktop:{{ VERSION }}
     restart: always
     stdin_open: true
@@ -18,3 +20,5 @@ services:
     ports:
     - {{ NOMACHINE_PORT }}:4000/tcp
     - {{ NOMACHINE_UDP_PORT }}:4000/udp
+    volumes:
+      - /dev/net/tun:/dev/net/tun
