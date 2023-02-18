@@ -3,7 +3,7 @@ FROM ramirezfx/linuxmint-baseimage:$VER
 ENV SHELL=/bin/bash
 
 RUN apt-get update -y
-RUN apt-get install -y git cups wget
+RUN apt-get install -y git cups wget mint-meta-codecs
 
 # Download latest nomachine-server
 RUN wget -O /tmp/nomachine.deb "https://www.nomachine.com/free/linux/64/deb" && apt-get install -y /tmp/nomachine.deb
@@ -14,9 +14,8 @@ RUN wget -O /nxserver.sh https://github.com/ramirezfx/linuxmint-desktop/raw/main
 # Custom Packages And Sripts:
 RUN wget -O /custom.sh https://github.com/ramirezfx/linuxmint-desktop/raw/main/custom.sh && chmod +x /custom.sh
 
-# Add Language-Support:
-RUN wget -O /tmp/languages.txt https://github.com/ramirezfx/linuxmint-desktop/raw/main/languages.txt && xargs -a /tmp/languages.txt apt-get install -y
-RUN rm -Rf /etc/localtime
+# Create DATA-DIR
+RUN mkdir /data && chmod 777 /data
 
 RUN /custom.sh
 
